@@ -6,8 +6,8 @@ myname: test
 mypassword: 123456
 
 #授权ips,逗号隔开
-ipAuthSwitch: true
-ips: 137.135.57.90, 0:0:0:0:0:0:0:1
+#ipAuthSwitch: true
+#ips: 137.135.57.90, 0:0:0:0:0:0:0:1
 
 
 
