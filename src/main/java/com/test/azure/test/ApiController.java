@@ -43,10 +43,10 @@ public class ApiController {
         return "OK";
     }
 
-    @Scheduled(fixedRate=20000)
-    public void test(){
-        log.info("test");
-    }
+//    @Scheduled(fixedRate=20000)
+//    public void test(){
+//        log.info("test");
+//    }
 
 
 }
