@@ -7,4 +7,4 @@ mypassword: 123456
 
 #授权ips,逗号隔开
 ipAuthSwitch: true
-ips: 24.18.235.95
+ips: 137.135.57.90

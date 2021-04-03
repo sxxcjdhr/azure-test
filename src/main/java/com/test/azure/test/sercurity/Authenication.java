@@ -1,4 +1,4 @@
-package com.test.azure.sercurity;
+package com.test.azure.test.sercurity;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint;
@@ -21,7 +21,7 @@ public class Authenication extends BasicAuthenticationEntryPoint {
         response.addHeader("WWW-Authenticate", "Basic realm=" + getRealmName());
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         PrintWriter writer = response.getWriter();
-        writer.println("账号密码不正确 HTTP Status 401 - " + authEx.getMessage());
+        writer.println("Invalid username and password HTTP Status 401 - " + authEx.getMessage());
     }
 
     @Override
