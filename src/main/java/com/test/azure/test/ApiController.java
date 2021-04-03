@@ -1,5 +1,8 @@
 package com.test.azure.test;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -19,7 +22,7 @@ import java.util.Map;
 @RestController
 @RequestMapping(value = "/api")
 public class ApiController {
-
+    private final static Logger log = LoggerFactory.getLogger(ApiController.class);
     @RequestMapping(value = "/health", method = RequestMethod.POST)
     @ResponseBody
     public Object health() {
@@ -39,5 +42,11 @@ public class ApiController {
         System.out.println(auth.getName());
         return "OK";
     }
+
+    @Scheduled(fixedRate=20000)
+    public void test(){
+        log.info("test");
+    }
+
 
 }

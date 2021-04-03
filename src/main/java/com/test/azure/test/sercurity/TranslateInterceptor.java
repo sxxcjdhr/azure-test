@@ -2,6 +2,7 @@ package com.test.azure.test.sercurity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.lang.Nullable;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -27,6 +28,7 @@ public class TranslateInterceptor implements HandlerInterceptor {
         this.ips = ips;
         this.ipAuthSwitch = ipAuthSwitch;
     }
+
 
     /**
      * preHandle是在请求执行前执行的
